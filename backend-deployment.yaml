@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: backend
-          image: likoste1/board-backend:1.0
+          image: likoste1/board-backend:1.1
           ports:
             - containerPort: 8000
