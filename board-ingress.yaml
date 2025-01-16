@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: 'nginx'
 spec:
   rules:
-    - host: 192.168.49.2
+    - host: example.domain # 실제 도메인 필요 
       http:
       paths:
         - path: /
@@ -16,9 +16,6 @@ spec:
               name: nginx
               port:
                 number: 80
-# 단 service.yaml 파일에서 nginx 를 nodeport로 한걸 변경필요
-# 그리고 k3s 에는 tradfik 라는 ingress Controller 가 있음
-# minikube에는 없음
-# 그리고 Nginx ingress controller 를 공식 배포 yaml 파일 설치 필요
-# https://github.com/kubernetes/ingress-nginx/blob/main/docs/deploy/index.md
-# ArgoCD, Grafana, 프로메테우스는 Helm으로 설치 완료
+
+# host에 도메인이 필요 - localhost로 하면 접속이 안됨 -
+

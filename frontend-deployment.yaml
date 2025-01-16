@@ -19,11 +19,11 @@ spec:
           image: likoste1/board-frontend:1.1
           ports:
             - containerPort: 5173
-          # 리소스 요청/제한 설정
+          # 리소스 제한 설정
           resources:
             requests:
-              cpu: 1000m
-              memory: 512Mi
+              cpu: 1000m # 최소 CPU 1코어
+              memory: 512Mi # 최소 메모리 512Mi
             limits:
-              cpu: 2000m
-              memory: 1024Mi
+              cpu: 2000m # 최대 CPU 2코어
+              memory: 1024Mi # 최대 메모리 1024Mi
