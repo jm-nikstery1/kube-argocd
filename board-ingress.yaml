@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: board-ingress
+  annotations:
+    kubernetes.io/ingress.class: 'nginx'
+spec:
+  rules:
+    - host: example.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nginx
+                port:
+                  number: 80
+# 단 service.yaml 파일에서 nginx 를 nodeport로 한걸 변경필요
+# 그리고 k3s 에는 tradfik 라는 ingress Controller 가 있음
+# minikube에는 없음
+# 그리고 Nginx ingress controller 를 공식 배포 yaml 파일 설치 필요
+# https://github.com/kubernetes/ingress-nginx/blob/main/docs/deploy/index.md
+# ArgoCD, Grafana, 프로메테우스는 Helm으로 설치 완료

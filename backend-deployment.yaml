@@ -5,6 +5,7 @@ metadata:
   labels:
     app: backend_db
 spec:
+  # replicas는 HPA가 조정하게 되므로 여기에 적힌 값(1)이 "초기값"이 됩니다.
   replicas: 1
   selector:
     matchLabels:
@@ -19,3 +20,12 @@ spec:
           image: likoste1/board-backend:1.1
           ports:
             - containerPort: 8000
+          # 리소스 요청/제한 설정
+          resources:
+            requests:
+              cpu: 1000m # 최소 CPU 1코어
+              memory: 512Mi # 최소 메모리 512Mi
+            limits:
+              cpu: 2000m # 최대 CPU 2코어
+              memory: 1024Mi # 최대 메모리 1024Mi
+
