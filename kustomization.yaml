@@ -1,0 +1,8 @@
+resources:
+  - service.yaml
+  - nginx-deployment.yaml
+  - backend-deployment.yaml
+  - frontend-deployment.yaml
+  - backend-hpa.yaml
+  - frontend-hpa.yaml
+  # - board-ingress.yaml - 이건 제외할것 로컬컴퓨터에 환경에서 제한
