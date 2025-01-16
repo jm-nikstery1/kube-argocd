@@ -37,9 +37,9 @@ metadata:
 spec:
   selector:
     app: nginx
-  type: ClusterIP # ClusterIP 변경 필요
+  type: NodePort # - 로컬 환경 제한조건
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      #nodePort: 30010 # ClusterIP 변경 필요
+      nodePort: 30010 # - 로컬 환경 제한조건
