@@ -5,4 +5,4 @@ resources:
   - frontend-deployment.yaml
   - backend-hpa.yaml
   - frontend-hpa.yaml
-  # - board-ingress.yaml - 이건 제외할것 로컬컴퓨터에 환경에서 제한
+  # - board-ingress.yaml - 로컬컴퓨터에 환경에서 제한
