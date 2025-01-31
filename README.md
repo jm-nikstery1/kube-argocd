@@ -47,6 +47,5 @@ HPA(Horizontal Pod Autoscaling)
 
 ---
 # 아쉬운점
-- 도메인 필요 - 개인 컴퓨터 1대로 하면서 nginx ingress controller 부분에서 제한 조건이 생김 
 - DB 부분을 준비 - 복제를 하게되면 PVC 또는 PV 또는 stateful 및 프록시 연결 해보기
 - Istio 로 서비 메쉬 해보기
